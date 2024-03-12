@@ -1,19 +1,27 @@
 public class Reverse {
-	public static void main(String[] args) {
-		//recieves input and declares int for string length
-		String input = args[0];
-		int tester = input.length();
-		String empty = "";
-		
+    public static void main(String[] args) {
+        // Receive input and declare variables
+        String input = args[0];
+        int length = input.length();
+        String reversed = "";
 
-		while(tester > 0){
-			char nextAddition = input.charAt(tester - 1);
-			empty = empty + nextAddition;
-			tester--;
+        // Reverse the input string
+        for (int i = length - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
+        }
 
-		}
-			System.out.println(empty);
-			int length = input.length();
-			System.out.println("The middle character is " + input.charAt(length/2));
-	}
+        // Print the reversed string
+        System.out.println(reversed);
+
+        // Print the middle character(s)
+        if (length % 2 == 0) {
+            // If the length is even, there are two middle characters
+            int middle = length / 2;
+            System.out.println("The middle characters are: " + input.charAt(middle - 1) + " and " + input.charAt(middle));
+        } else {
+            // If the length is odd, there's only one middle character
+            int middle = length / 2;
+            System.out.println("The middle character is: " + input.charAt(middle));
+        }
+    }
 }

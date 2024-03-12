@@ -17,7 +17,7 @@ public class OneOfEachStats1 {
 		int bigFams = 0;
 
 		//for loop running the expirament t times
-		for(int i = 0; i <= t; i++){
+		for(int i = 0; i < t; i++){
 
 		//saves info from last loop to cumulative variable stats
 		totalKids = totalKids + numChild;
@@ -32,9 +32,6 @@ public class OneOfEachStats1 {
 		if(numChild >= 4){
 			bigFams = bigFams + 1;
 		}
-
-
-
 			//reinitializes stats for next expirament
 			boy = false;
 			girl = false;
@@ -54,37 +51,32 @@ public class OneOfEachStats1 {
 				if(identAssign > 5 ){
 				boys = boys + 1;
 				boy = true;
-
 				}
 
 				if(identAssign <= 5){
 				girls = girls + 1;
 				girl = true;
-
 				}
-
-
 			}
-						//calculate family stats here
-			avgFamSize = (double) totalKids / t;
-			//calculats mean
-			if(famsOf2 >= famsOf3 && famsOf2 >= bigFams){
-				mean = "2";
-			}
-			if(famsOf3 > famsOf2 && famsOf3 > bigFams){
-				mean = "3";
-			}
-			if(bigFams > famsOf2 && bigFams > famsOf3){
-				mean = "4 or more";
-			}
-
 	}
-
+					//calculate family stats here
+					avgFamSize = (double) totalKids / t;
+					//calculats mean
+					if(famsOf2 >= famsOf3 && famsOf2 >= bigFams){
+						mean = "2";
+					}
+					if(famsOf3 > famsOf2 && famsOf3 > bigFams){
+						mean = "3";
+					}
+					if(bigFams > famsOf2 && bigFams > famsOf3){
+						mean = "4 or more";
+					}
+					
 	//prints stats
 	System.out.println("Average: " + avgFamSize + " children to get at least one of each gender.");
 	System.out.println("Number of families with 2 children: " + famsOf2);
 	System.out.println("Number of families with 3 children: " + famsOf3);
 	System.out.println("Number of families with 4 or more children: " + bigFams);
-	System.out.println("The most common number of children is " + mean + ".");
+	System.out.println("The most common number of children is " + mean + ".");	
 }
 }

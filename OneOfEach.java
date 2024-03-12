@@ -1,7 +1,7 @@
 public class OneOfEach{
 	public static void main(String[] args){
 		String sen = "You made it... and you now have ";
-		String sen2 = " childen";
+		String sen2 = " children";
 		String b = "b ";
 		String g = "g ";
 		String bg = "";
