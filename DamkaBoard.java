@@ -1,8 +1,17 @@
-/**
- *  Gets a command-line argument n (int), and prints an n-by-n damka board.
- */
 public class DamkaBoard {
-	public static void main(String[] args) {
-		//// Put your code here
+	public static void main(String[] args){
+		int given = Integer.parseInt(args[0]);
+		int i; //used for collumns
+		int j; //used for rows
+
+		for(i = 0; i < given; i++){
+				if(i % 2 != 0){
+					System.out.print(" ");
+				}
+				for(j = 0; j < given; j++){
+				System.out.print("* ");
+				}
+			System.out.println();
+		}
 	}
 }
