@@ -1,27 +1,27 @@
 public class Reverse {
     public static void main(String[] args) {
-        // Receive input and declare variables
+        // gets input
         String input = args[0];
         int length = input.length();
         String reversed = "";
 
-        // Reverse the input string
+        // Reverses from decrement
         for (int i = length - 1; i >= 0; i--) {
             reversed += input.charAt(i);
         }
 
-        // Print the reversed string
+        // prints
         System.out.println(reversed);
 
-        // Print the middle character(s)
+        // print the mid chars
         if (length % 2 == 0) {
-            // If the length is even, there are two middle characters
+            //length even, there are two middle chars -> find second one
             int middle = length / 2;
-            System.out.println("The middle characters are: " + input.charAt(middle - 1) + " and " + input.charAt(middle));
+            System.out.println("The middle character is " + input.charAt(middle + 1));
         } else {
-            // If the length is odd, there's only one middle character
+            // length is odd -> only one mid char
             int middle = length / 2;
-            System.out.println("The middle character is: " + input.charAt(middle));
+            System.out.println("The middle character is " + input.charAt(middle));
         }
     }
 }
