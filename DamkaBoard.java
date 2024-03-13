@@ -5,7 +5,7 @@ public class DamkaBoard {
 		int j; //used for rows
 
 		for(i = 0; i < given; i++){
-				if(i % 2 != 0){
+				if(i % 2 != 0 && i != given - 1){
 					System.out.print(" ");
 				}
 				for(j = 0; j < given; j++){
