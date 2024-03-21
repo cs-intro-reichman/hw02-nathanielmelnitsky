@@ -17,7 +17,7 @@ public class Reverse {
         if (length % 2 == 0) {
             //length even, there are two middle chars -> find second one
             int middle = length / 2;
-            System.out.println("The middle character is " + input.charAt(middle));
+            System.out.println("The middle character is " + input.charAt(middle - 1));
         } else {
             // length is odd -> only one mid char
             int middle = length / 2;
