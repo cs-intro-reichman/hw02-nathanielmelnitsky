@@ -1,6 +1,6 @@
 public class DamkaBoard {
 	public static void main(String[] args){
-		int given = 10; //Integer.parseInt(args[0]);
+		int given = Integer.parseInt(args[0]);
 
 		for(int i = 0; i < given; i++){
 				for(int j = 0; j < given; j++){
@@ -10,8 +10,9 @@ public class DamkaBoard {
 						System.out.print(" *");
 					}
 
-					System.out.println();
+					
 				}
+				System.out.println();
 		}
 	}
 }
